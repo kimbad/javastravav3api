@@ -141,3 +141,28 @@ Dependencies
 Java
 ====
 The Stravajava API is dependent on Java 8 runtime as it uses the new asynchronous processing model (specifically, CompletableFuture). It won't compile on Java 7 or below and at this stage there's no intention to backport it (although if you want to, feel free - should only need to remove all the asynchronous bits).
+
+
+```mermaid
+classDiagram
+      Animal <|-- Duck
+      Animal <|-- Fish
+      Animal <|-- Zebra
+      Animal : +int age
+      Animal : +String gender
+      Animal: +isMammal()
+      Animal: +mate()
+      class Duck{
+          +String beakColor
+          +swim()
+          +quack()
+      }
+      class Fish{
+          -int sizeInFeet
+          -canEat()
+      }
+      class Zebra{
+          +bool is_wild
+          +run()
+      }
+```
